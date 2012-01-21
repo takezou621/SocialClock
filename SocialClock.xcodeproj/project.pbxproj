@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2E01DA914CB0B9D0086A9CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E01DA814CB0B9D0086A9CD /* UIKit.framework */; };
+		D2E01DAB14CB0B9D0086A9CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E01DAA14CB0B9D0086A9CD /* Foundation.framework */; };
+		D2E01DAD14CB0B9D0086A9CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E01DAC14CB0B9D0086A9CD /* CoreGraphics.framework */; };
+		D2E01DB314CB0B9D0086A9CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2E01DB114CB0B9D0086A9CD /* InfoPlist.strings */; };
+		D2E01DB514CB0B9D0086A9CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E01DB414CB0B9D0086A9CD /* main.m */; };
+		D2E01DB914CB0B9D0086A9CD /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E01DB814CB0B9D0086A9CD /* SCAppDelegate.m */; };
+		D2E01DBC14CB0B9D0086A9CD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E01DBA14CB0B9D0086A9CD /* MainStoryboard.storyboard */; };
+		D2E01DBF14CB0B9D0086A9CD /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E01DBE14CB0B9D0086A9CD /* SCViewController.m */; };
+		D2E01DC714CB0B9E0086A9CD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E01DC614CB0B9E0086A9CD /* SenTestingKit.framework */; };
+		D2E01DC814CB0B9E0086A9CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E01DA814CB0B9D0086A9CD /* UIKit.framework */; };
+		D2E01DC914CB0B9E0086A9CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E01DAA14CB0B9D0086A9CD /* Foundation.framework */; };
+		D2E01DD114CB0B9E0086A9CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2E01DCF14CB0B9E0086A9CD /* InfoPlist.strings */; };
+		D2E01DD414CB0B9E0086A9CD /* SocialClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E01DD314CB0B9E0086A9CD /* SocialClockTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2E01DCA14CB0B9E0086A9CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2E01D9B14CB0B9D0086A9CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2E01DA314CB0B9D0086A9CD;
+			remoteInfo = SocialClock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D2E01DA414CB0B9D0086A9CD /* SocialClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E01DA814CB0B9D0086A9CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D2E01DAA14CB0B9D0086A9CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2E01DAC14CB0B9D0086A9CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D2E01DB014CB0B9D0086A9CD /* SocialClock-Info.plist */ = {isa = PBXFileReference; path = "SocialClock-Info.plist"; sourceTree = "<group>"; };
+		D2E01DB214CB0B9D0086A9CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D2E01DB414CB0B9D0086A9CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D2E01DB614CB0B9D0086A9CD /* SocialClock-Prefix.pch */ = {isa = PBXFileReference; path = "SocialClock-Prefix.pch"; sourceTree = "<group>"; };
+		D2E01DB714CB0B9D0086A9CD /* SCAppDelegate.h */ = {isa = PBXFileReference; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		D2E01DB814CB0B9D0086A9CD /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		D2E01DBB14CB0B9D0086A9CD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D2E01DBD14CB0B9D0086A9CD /* SCViewController.h */ = {isa = PBXFileReference; path = SCViewController.h; sourceTree = "<group>"; };
+		D2E01DBE14CB0B9D0086A9CD /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		D2E01DC514CB0B9D0086A9CD /* SocialClockTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialClockTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E01DC614CB0B9E0086A9CD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D2E01DCE14CB0B9E0086A9CD /* SocialClockTests-Info.plist */ = {isa = PBXFileReference; path = "SocialClockTests-Info.plist"; sourceTree = "<group>"; };
+		D2E01DD014CB0B9E0086A9CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D2E01DD214CB0B9E0086A9CD /* SocialClockTests.h */ = {isa = PBXFileReference; path = SocialClockTests.h; sourceTree = "<group>"; };
+		D2E01DD314CB0B9E0086A9CD /* SocialClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialClockTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2E01DA114CB0B9D0086A9CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E01DA914CB0B9D0086A9CD /* UIKit.framework in Frameworks */,
+				D2E01DAB14CB0B9D0086A9CD /* Foundation.framework in Frameworks */,
+				D2E01DAD14CB0B9D0086A9CD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2E01DC114CB0B9D0086A9CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E01DC714CB0B9E0086A9CD /* SenTestingKit.framework in Frameworks */,
+				D2E01DC814CB0B9E0086A9CD /* UIKit.framework in Frameworks */,
+				D2E01DC914CB0B9E0086A9CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2E01D9914CB0B9D0086A9CD = {
+			isa = PBXGroup;
+			children = (
+				D2E01DAE14CB0B9D0086A9CD /* SocialClock */,
+				D2E01DCC14CB0B9E0086A9CD /* SocialClockTests */,
+				D2E01DA714CB0B9D0086A9CD /* Frameworks */,
+				D2E01DA514CB0B9D0086A9CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2E01DA514CB0B9D0086A9CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2E01DA414CB0B9D0086A9CD /* SocialClock.app */,
+				D2E01DC514CB0B9D0086A9CD /* SocialClockTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2E01DA714CB0B9D0086A9CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2E01DA814CB0B9D0086A9CD /* UIKit.framework */,
+				D2E01DAA14CB0B9D0086A9CD /* Foundation.framework */,
+				D2E01DAC14CB0B9D0086A9CD /* CoreGraphics.framework */,
+				D2E01DC614CB0B9E0086A9CD /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2E01DAE14CB0B9D0086A9CD /* SocialClock */ = {
+			isa = PBXGroup;
+			children = (
+				D2E01DB714CB0B9D0086A9CD /* SCAppDelegate.h */,
+				D2E01DB814CB0B9D0086A9CD /* SCAppDelegate.m */,
+				D2E01DBA14CB0B9D0086A9CD /* MainStoryboard.storyboard */,
+				D2E01DBD14CB0B9D0086A9CD /* SCViewController.h */,
+				D2E01DBE14CB0B9D0086A9CD /* SCViewController.m */,
+				D2E01DAF14CB0B9D0086A9CD /* Supporting Files */,
+			);
+			path = SocialClock;
+			sourceTree = "<group>";
+		};
+		D2E01DAF14CB0B9D0086A9CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2E01DB014CB0B9D0086A9CD /* SocialClock-Info.plist */,
+				D2E01DB114CB0B9D0086A9CD /* InfoPlist.strings */,
+				D2E01DB414CB0B9D0086A9CD /* main.m */,
+				D2E01DB614CB0B9D0086A9CD /* SocialClock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2E01DCC14CB0B9E0086A9CD /* SocialClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2E01DD214CB0B9E0086A9CD /* SocialClockTests.h */,
+				D2E01DD314CB0B9E0086A9CD /* SocialClockTests.m */,
+				D2E01DCD14CB0B9E0086A9CD /* Supporting Files */,
+			);
+			path = SocialClockTests;
+			sourceTree = "<group>";
+		};
+		D2E01DCD14CB0B9E0086A9CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2E01DCE14CB0B9E0086A9CD /* SocialClockTests-Info.plist */,
+				D2E01DCF14CB0B9E0086A9CD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2E01DA314CB0B9D0086A9CD /* SocialClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2E01DD714CB0B9E0086A9CD /* Build configuration list for PBXNativeTarget "SocialClock" */;
+			buildPhases = (
+				D2E01DA014CB0B9D0086A9CD /* Sources */,
+				D2E01DA114CB0B9D0086A9CD /* Frameworks */,
+				D2E01DA214CB0B9D0086A9CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialClock;
+			productName = SocialClock;
+			productReference = D2E01DA414CB0B9D0086A9CD /* SocialClock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2E01DC414CB0B9D0086A9CD /* SocialClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2E01DDA14CB0B9E0086A9CD /* Build configuration list for PBXNativeTarget "SocialClockTests" */;
+			buildPhases = (
+				D2E01DC014CB0B9D0086A9CD /* Sources */,
+				D2E01DC114CB0B9D0086A9CD /* Frameworks */,
+				D2E01DC214CB0B9D0086A9CD /* Resources */,
+				D2E01DC314CB0B9D0086A9CD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2E01DCB14CB0B9E0086A9CD /* PBXTargetDependency */,
+			);
+			name = SocialClockTests;
+			productName = SocialClockTests;
+			productReference = D2E01DC514CB0B9D0086A9CD /* SocialClockTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2E01D9B14CB0B9D0086A9CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = None;
+			};
+			buildConfigurationList = D2E01D9E14CB0B9D0086A9CD /* Build configuration list for PBXProject "SocialClock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D2E01D9914CB0B9D0086A9CD;
+			productRefGroup = D2E01DA514CB0B9D0086A9CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2E01DA314CB0B9D0086A9CD /* SocialClock */,
+				D2E01DC414CB0B9D0086A9CD /* SocialClockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2E01DA214CB0B9D0086A9CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E01DB314CB0B9D0086A9CD /* InfoPlist.strings in Resources */,
+				D2E01DBC14CB0B9D0086A9CD /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2E01DC214CB0B9D0086A9CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E01DD114CB0B9E0086A9CD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D2E01DC314CB0B9D0086A9CD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2E01DA014CB0B9D0086A9CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E01DB514CB0B9D0086A9CD /* main.m in Sources */,
+				D2E01DB914CB0B9D0086A9CD /* SCAppDelegate.m in Sources */,
+				D2E01DBF14CB0B9D0086A9CD /* SCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2E01DC014CB0B9D0086A9CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E01DD414CB0B9E0086A9CD /* SocialClockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2E01DCB14CB0B9E0086A9CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2E01DA314CB0B9D0086A9CD /* SocialClock */;
+			targetProxy = D2E01DCA14CB0B9E0086A9CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2E01DB114CB0B9D0086A9CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2E01DB214CB0B9D0086A9CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D2E01DBA14CB0B9D0086A9CD /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2E01DBB14CB0B9D0086A9CD /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		D2E01DCF14CB0B9E0086A9CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2E01DD014CB0B9E0086A9CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2E01DD514CB0B9E0086A9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D2E01DD614CB0B9E0086A9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2E01DD814CB0B9E0086A9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocialClock/SocialClock-Prefix.pch";
+				INFOPLIST_FILE = "SocialClock/SocialClock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D2E01DD914CB0B9E0086A9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocialClock/SocialClock-Prefix.pch";
+				INFOPLIST_FILE = "SocialClock/SocialClock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D2E01DDB14CB0B9E0086A9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SocialClock.app/SocialClock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocialClock/SocialClock-Prefix.pch";
+				INFOPLIST_FILE = "SocialClockTests/SocialClockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D2E01DDC14CB0B9E0086A9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SocialClock.app/SocialClock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocialClock/SocialClock-Prefix.pch";
+				INFOPLIST_FILE = "SocialClockTests/SocialClockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2E01D9E14CB0B9D0086A9CD /* Build configuration list for PBXProject "SocialClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2E01DD514CB0B9E0086A9CD /* Debug */,
+				D2E01DD614CB0B9E0086A9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2E01DD714CB0B9E0086A9CD /* Build configuration list for PBXNativeTarget "SocialClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2E01DD814CB0B9E0086A9CD /* Debug */,
+				D2E01DD914CB0B9E0086A9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D2E01DDA14CB0B9E0086A9CD /* Build configuration list for PBXNativeTarget "SocialClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2E01DDB14CB0B9E0086A9CD /* Debug */,
+				D2E01DDC14CB0B9E0086A9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2E01D9B14CB0B9D0086A9CD /* Project object */;
+}
