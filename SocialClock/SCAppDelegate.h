@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBConnect.h"
+#import "SCViewController.h"
 
-@interface SCAppDelegate : UIResponder <UIApplicationDelegate>
+@interface SCAppDelegate : UIResponder <UIApplicationDelegate,FBSessionDelegate>
+{
+    Facebook    *facebook;
+    SCViewController    *viewController;
+    
+}
 
+@property (nonatomic, retain) Facebook  *facebook;
+@property (nonatomic, retain) SCViewController  *viewController;
 @property (strong, nonatomic) UIWindow *window;
 
 @end

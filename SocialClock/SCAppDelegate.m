@@ -11,6 +11,8 @@
 @implementation SCAppDelegate
 
 @synthesize window = _window;
+@synthesize facebook;
+@synthesize viewController;
 
 - (void)dealloc
 {
@@ -20,8 +22,46 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    facebook = [[Facebook alloc] initWithAppId:@"293502244030802" andDelegate:self];
+    
+    NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"] &&
+        [defaults objectForKey:@"FBExpirationDateKey"]) {
+        facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+        facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+    }
+    
+    if (![facebook isSessionValid]) {
+        
+        NSArray *permissions = [[NSArray alloc] initWithObjects:
+                                @"user_likes",
+                                @"read_stream",nil];
+        
+        
+        [facebook authorize:permissions];
+        [permissions release];
+    }    
     return YES;
+}
+
+-(void)fbDidLogin {
+    NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
+    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+}
+
+// Pre 4.2 support
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [facebook handleOpenURL:url];
+}
+
+// For 4.2+ support
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [facebook handleOpenURL:url];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

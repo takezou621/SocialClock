@@ -10,6 +10,8 @@
 
 @implementation SCViewController
 
+@synthesize facebook;
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -21,7 +23,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    facebook = [[Facebook alloc] initWithAppId:@"293502244030802" andDelegate:self];
+    
 }
 
 - (void)viewDidUnload
@@ -57,4 +60,17 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)logoutButtonClicked:(id)sender {
+    [facebook logout];
+}
+
+-(void)fbDidLogout{
+    // Remove saved authorizatino information if it exists
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"]) {
+        [defaults removeObjectForKey:@"FBAccessTokenKey"];
+        [defaults removeObjectForKey:@"FBExpirationDateKey"];
+        [defaults synchronize];
+    }
+}
 @end

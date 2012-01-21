@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Facebook.h"
 
-@interface SCViewController : UIViewController
+@interface SCViewController : UIViewController<FBSessionDelegate>
+{
+    Facebook    *facebook;
+}
+
+@property(nonatomic,retain)Facebook *facebook;
+- (IBAction)logoutButtonClicked:(id)sender;
 
 @end
