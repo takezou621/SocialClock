@@ -23,8 +23,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+    // Facebookインスタンス生成
     facebook = [[Facebook alloc] initWithAppId:@"293502244030802" andDelegate:self];
     
+    // すでにFB用アクセストークンとその期限をUserDefaultsに設定している場合は
+    // facebookインスタンスに設定（ログイン済状態）
     NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults objectForKey:@"FBAccessTokenKey"] &&
         [defaults objectForKey:@"FBExpirationDateKey"]) {
@@ -33,23 +36,15 @@
     }
     
     if (![facebook isSessionValid]) {
-        
+        // トークンの期限切れ
         NSArray *permissions = [[NSArray alloc] initWithObjects:
                                 @"user_likes",
                                 @"read_stream",nil];
-        
-        
+        // 認証処理を行う
         [facebook authorize:permissions];
         [permissions release];
     }    
     return YES;
-}
-
--(void)fbDidLogin {
-    NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
-    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
-    [defaults synchronize];
 }
 
 // Pre 4.2 support
@@ -66,41 +61,58 @@
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
-    /*
-     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-     */
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-     */
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    /*
-     Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-     */
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-     */
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    /*
-     Called when the application is about to terminate.
-     Save data if appropriate.
-     See also applicationDidEnterBackground:.
-     */
+}
+
+#pragma mark -
+#pragma mark FBSession Delegate
+-(void)fbDidLogin
+{
+    NSUserDefaults  *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
+    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+}
+
+-(void)fbDidNotLogin:(BOOL)cancelled
+{
+    
+}
+
+-(void)fbDidExtendToken:(NSString *)accessToken expiresAt:(NSDate *)expiresAt
+{
+    
+}
+
+-(void)fbDidLogout
+{
+    // Remove saved authorizatino information if it exists
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"]) {
+        [defaults removeObjectForKey:@"FBAccessTokenKey"];
+        [defaults removeObjectForKey:@"FBExpirationDateKey"];
+        [defaults synchronize];
+    }   
+}
+
+-(void)fbSessionInvalidated
+{
+    
 }
 
 @end

@@ -7,10 +7,11 @@
 //
 
 #import "SCViewController.h"
+#import "SCAppDelegate.h"
 
 @implementation SCViewController
 
-@synthesize facebook;
+//@synthesize facebook;
 
 - (void)didReceiveMemoryWarning
 {
@@ -23,12 +24,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    facebook = [[Facebook alloc] initWithAppId:@"293502244030802" andDelegate:self];
-    
+//    facebook = [[Facebook alloc] initWithAppId:@"293502244030802" andDelegate:self];
+    [logoutButton addTarget:self
+                     action:@selector(logoutButtonClicked:)
+           forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewDidUnload
 {
+    [logoutButton release];
+    logoutButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -61,16 +66,15 @@
 }
 
 - (IBAction)logoutButtonClicked:(id)sender {
-    [facebook logout];
+    SCAppDelegate   *delegate = [[SCAppDelegate alloc] init];
+    [delegate fbDidLogout];
 }
 
 -(void)fbDidLogout{
-    // Remove saved authorizatino information if it exists
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:@"FBAccessTokenKey"]) {
-        [defaults removeObjectForKey:@"FBAccessTokenKey"];
-        [defaults removeObjectForKey:@"FBExpirationDateKey"];
-        [defaults synchronize];
-    }
+
+}
+- (void)dealloc {
+    [logoutButton release];
+    [super dealloc];
 }
 @end

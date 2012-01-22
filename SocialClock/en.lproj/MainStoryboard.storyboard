@@ -31,13 +31,13 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="logoutButtonClicked:" destination="2" eventType="touchUpInside" id="Zos-hb-Jah"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="logoutButton" destination="DmM-7I-EB1" id="xqf-g6-zkP"/>
+                    </connections>
                 </viewController>
             </objects>
         </scene>
