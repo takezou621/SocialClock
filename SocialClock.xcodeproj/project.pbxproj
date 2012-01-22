@@ -43,6 +43,7 @@
 		D2E01E1414CB10740086A9CD /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E01DF714CB10230086A9CD /* SBJsonParser.m */; };
 		D2E01E1514CB10780086A9CD /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E01DF914CB10230086A9CD /* SBJsonWriter.m */; };
 		D2E01E1614CB116E0086A9CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E01DAC14CB0B9D0086A9CD /* CoreGraphics.framework */; };
+		D2E01E5314CBB8CA0086A9CD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D2E01E5214CBB8CA0086A9CD /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		D2E01DF714CB10230086A9CD /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		D2E01DF814CB10230086A9CD /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		D2E01DF914CB10230086A9CD /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		D2E01E5214CBB8CA0086A9CD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		D2E01D9914CB0B9D0086A9CD = {
 			isa = PBXGroup;
 			children = (
+				D2E01E5214CBB8CA0086A9CD /* README.md */,
 				D2E01DAE14CB0B9D0086A9CD /* SocialClock */,
 				D2E01DCC14CB0B9E0086A9CD /* SocialClockTests */,
 				D2E01DA714CB0B9D0086A9CD /* Frameworks */,
@@ -346,6 +349,7 @@
 				D2E01DB314CB0B9D0086A9CD /* InfoPlist.strings in Resources */,
 				D2E01DBC14CB0B9D0086A9CD /* MainStoryboard.storyboard in Resources */,
 				D2E01DFE14CB10230086A9CD /* FBDialog.bundle in Resources */,
+				D2E01E5314CBB8CA0086A9CD /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
