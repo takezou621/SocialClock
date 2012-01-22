@@ -7,15 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "Facebook.h"
-
 @interface SCViewController : UIViewController
 {
-//    Facebook    *facebook;
-    IBOutlet UIButton *logoutButton;
-}
 
-//@property(nonatomic,retain)Facebook *facebook;
-- (IBAction)logoutButtonClicked:(id)sender;
+    IBOutlet UILabel *clockLabel;
+}
+- (IBAction)fireAction:(id)sender;
+
 
 @end

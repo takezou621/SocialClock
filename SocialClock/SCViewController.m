@@ -7,7 +7,8 @@
 //
 
 #import "SCViewController.h"
-#import "SCAppDelegate.h"
+#import "ClockUtil.h"
+#import "AlarmUtil.h"
 
 @implementation SCViewController
 
@@ -16,7 +17,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -24,19 +24,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    facebook = [[Facebook alloc] initWithAppId:@"293502244030802" andDelegate:self];
-    [logoutButton addTarget:self
-                     action:@selector(logoutButtonClicked:)
-           forControlEvents:UIControlEventTouchUpInside];
+    
+    ClockUtil* clockUtil = [[ClockUtil alloc] init];
+    [clockUtil runTimer:clockLabel];
 }
 
 - (void)viewDidUnload
 {
-    [logoutButton release];
-    logoutButton = nil;
+
+    [clockLabel release];
+    clockLabel = nil;
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -65,16 +63,14 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (IBAction)logoutButtonClicked:(id)sender {
-    SCAppDelegate   *delegate = [[SCAppDelegate alloc] init];
-    [delegate fbDidLogout];
-}
-
--(void)fbDidLogout{
-
-}
-- (void)dealloc {
-    [logoutButton release];
+- (void)dealloc 
+{
+    [clockLabel release];
     [super dealloc];
+}
+
+- (IBAction)fireAction:(id)sender {
+    AlarmUtil *alarmUtil = [[[AlarmUtil alloc] init] autorelease];
+    [alarmUtil fire];
 }
 @end
