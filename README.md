@@ -12,6 +12,7 @@ If an image is found within the description, that becomes the screenshot of the 
 How to use
 ----------
 
+
 We expect this section for every plugin. It just explains how to use your plugin.
 Never should a plugin rely on a 3rd party link to explain its behavior or functionality. We need this to ensure that if a website is removed or becomes inaccessible, people can still enjoy your plugins' functionality.
 
